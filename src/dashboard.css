@@ -1,0 +1,616 @@
+/* =========================================
+   KRC GROUP MASTER PORTAL
+   PROFESSIONAL DASHBOARD
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #1f2937;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+    background: #111827;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 25px 20px;
+    border-bottom: 1px solid #273244;
+}
+
+.logo-box {
+    width: 48px;
+    height: 48px;
+    background: #ffffff;
+    color: #111827;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.logo-text h2 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.logo-text p {
+    margin-top: 3px;
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   SIDEBAR NAVIGATION
+========================================= */
+
+.sidebar-nav {
+    padding: 25px 14px;
+}
+
+.sidebar-nav a,
+.bottom-menu a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    color: #d1d5db;
+
+    padding: 13px 15px;
+    margin-bottom: 6px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: all 0.2s ease;
+}
+
+.sidebar-nav a span,
+.bottom-menu a span {
+    width: 24px;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/* Hover */
+
+.sidebar-nav a:hover,
+.bottom-menu a:hover {
+    background: #1f2937;
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+
+/* Active */
+
+.sidebar-nav a.active {
+    background: #ffffff;
+    color: #111827;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   BOTTOM MENU
+========================================= */
+
+.bottom-menu {
+    margin-top: auto;
+    padding: 15px 14px 20px;
+    border-top: 1px solid #273244;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.topbar {
+    height: 82px;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.topbar h1 {
+    font-size: 24px;
+    color: #111827;
+    font-weight: 700;
+}
+
+.topbar p {
+    margin-top: 5px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   ADMIN PROFILE
+========================================= */
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #111827;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+}
+
+.admin-profile strong {
+    display: block;
+    font-size: 14px;
+    color: #111827;
+}
+
+.admin-profile small {
+    display: block;
+    margin-top: 3px;
+    color: #6b7280;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content {
+    padding: 32px 35px;
+}
+
+
+/* =========================================
+   WELCOME CARD
+========================================= */
+
+.welcome-card {
+    background: #111827;
+    color: white;
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    margin-bottom: 28px;
+
+    box-shadow: 0 8px 25px rgba(17, 24, 39, 0.12);
+}
+
+.welcome-card h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.welcome-card p {
+    color: #d1d5db;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   STAT CARDS
+========================================= */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+}
+
+.stat-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+
+    background: #f3f4f6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.stat-card h3 {
+    font-size: 15px;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+    margin-bottom: 18px;
+}
+
+.section-title h2 {
+    font-size: 20px;
+    color: #111827;
+}
+
+.section-title p {
+    margin-top: 5px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   MODULE GRID
+========================================= */
+
+.modules-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   MODULE CARD
+========================================= */
+
+.module-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 15px;
+
+    padding: 24px;
+
+    display: flex;
+
+    gap: 18px;
+
+    transition: all 0.2s ease;
+}
+
+.module-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.module-icon {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background: #f3f4f6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.module-content {
+    flex: 1;
+}
+
+.module-content h3 {
+    color: #111827;
+
+    font-size: 17px;
+
+    margin-bottom: 7px;
+}
+
+.module-content p {
+    color: #6b7280;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 16px;
+}
+
+
+/* =========================================
+   MODULE BUTTON
+========================================= */
+
+.module-button {
+    display: inline-block;
+
+    background: #111827;
+    color: #ffffff;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.module-button:hover {
+    background: #374151;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    padding: 20px 35px;
+
+    border-top: 1px solid #e5e7eb;
+
+    background: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #9ca3af;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+    }
+
+    .topbar {
+        padding: 0 20px;
+    }
+
+    .content {
+        padding: 25px 20px;
+    }
+
+    .modules-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        min-height: auto;
+    }
+
+    .dashboard-container {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar-nav {
+        display: flex;
+
+        overflow-x: auto;
+
+        padding: 12px;
+    }
+
+    .sidebar-nav a {
+        min-width: max-content;
+
+        margin-right: 5px;
+        margin-bottom: 0;
+    }
+
+    .bottom-menu {
+        display: flex;
+
+        gap: 5px;
+
+        padding: 10px 12px;
+    }
+
+    .bottom-menu a {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .topbar {
+        height: auto;
+
+        padding: 20px;
+
+        gap: 15px;
+    }
+
+    .topbar h1 {
+        font-size: 20px;
+    }
+
+    .admin-profile {
+        display: none;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-card {
+        padding: 24px;
+    }
+
+    .welcome-card h2 {
+        font-size: 21px;
+    }
+
+    .footer {
+        padding: 18px 20px;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+}

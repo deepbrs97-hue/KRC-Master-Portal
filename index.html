@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KRC GROUP | Master Portal</title>
+
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <section class="login-card">
+
+            <div class="brand">
+                <div class="brand-logo">KRC</div>
+
+                <h1>KRC GROUP</h1>
+                <p>MASTER PORTAL</p>
+            </div>
+
+            <div class="login-header">
+                <h2>Welcome Back</h2>
+                <p>Sign in to access the administration portal</p>
+            </div>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label for="username">Username</label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter your username"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <div class="login-options">
+                    <label class="remember">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Remember me</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="login-button">
+                    <span>Sign In</span>
+                </button>
+
+                <div id="message"></div>
+
+            </form>
+
+            <div class="login-footer">
+                <p>© 2026 KRC GROUP. All rights reserved.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="src/script.js"></script>
+
+</body>
+</html>
