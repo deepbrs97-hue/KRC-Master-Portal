@@ -1,82 +1,1391 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>KRC GROUP | Master Portal</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="src/style.css">
+    <title>KRC GROUP | Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
 </head>
 
 <body>
 
-    <main class="login-page">
+<div class="dashboard-container">
 
-        <section class="login-card">
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
 
-            <div class="brand">
-                <div class="brand-logo">KRC</div>
+    <aside class="sidebar">
 
-                <h1>KRC GROUP</h1>
-                <p>MASTER PORTAL</p>
+        <!-- LOGO -->
+        <div class="logo-section">
+
+            <div class="logo-box">
+
+                <img
+                    src="../assets/krc-logo.jpeg"
+                    alt="KRC GROUP Logo"
+                >
+
             </div>
 
-            <div class="login-header">
-                <h2>Welcome Back</h2>
-                <p>Sign in to access the administration portal</p>
+            <div class="logo-text">
+
+                <h2>KRC GROUP</h2>
+
             </div>
 
-            <form id="loginForm">
+        </div>
 
-                <div class="input-group">
-                    <label for="username">Username</label>
 
-                    <input
-                        type="text"
-                        id="username"
-                        placeholder="Enter your username"
-                        autocomplete="username"
-                        required
-                    >
+        <!-- SIDEBAR NAVIGATION -->
+
+        <nav class="sidebar-nav">
+
+            <!-- DASHBOARD -->
+
+            <a
+                href="#"
+                class="active"
+            >
+                🏠 Dashboard
+            </a>
+
+
+            <!-- OPERATIONS -->
+
+            <div class="nav-category">
+                OPERATIONS
+            </div>
+
+
+            <a
+                href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbwG75q8IFw4vXMHhvWWVuPWpjAKrzj791EG1P_-tyg6Pn5FBgZLYqaOThO5AAAI_mly/exec"
+                target="_blank"
+            >
+                📄 DOC PDF
+            </a>
+
+
+            <a
+                href="https://script.google.com/macros/s/AKfycbwXWs6Qhi3fNHep_XbOgRVtiIvejVz4HY7Juditm9ckbiQu8CtXvo55q5Sz5URKVl2g/exec"
+                target="_blank"
+            >
+                📄 Bulk Doc
+            </a>
+
+
+            <a
+                href="https://script.google.com/macros/s/AKfycbx9-ZamkZodXFOZ-LT2Iph_IAIN-pDM9Q3JHK2x8vAFKfuxwXFXDFC06fXylSIAOnd4MA/exec"
+                target="_blank"
+            >
+                🚛 Pack truck Doc
+            </a>
+
+
+            <a
+                href="https://script.google.com/macros/s/AKfycbzvLcA2o5W8PePqeikHtXw2wmSJ7fJSjPcfewOrYu2SpKD1fQ2LTH-uhSfgqu-Vnjyh-A/exec"
+                target="_blank"
+            >
+                👨‍✈️ Driver details
+            </a>
+
+
+            <a
+                href="https://script.google.com/macros/s/AKfycbzxk6PjoJSo8hggn0tIKGdWuvpP6IVWAF5BG_K51Tm_Isf7Gk5GGYdcLyrC-zgMAk2Ftw/exec"
+                target="_blank"
+            >
+                🚚 Bulk trips details
+            </a>
+
+
+            <a
+                href="https://script.google.com/macros/s/AKfycbwNjkFZJTxGO0IfEbp2iLhoGcKs4b8PlHpDhdSWp0oahTfWUPagUx-Yq_7x3u2CNsGMyQ/exec"
+                target="_blank"
+            >
+                🚛 Pack truck trips details
+            </a>
+
+
+            <a
+                href="https://script.google.com/macros/s/AKfycbwNjkFZJTxGO0IfEbp2iLhoGcKs4b8PlHpDhdSWp0oahTfWUPagUx-Yq_7x3u2CNsGMyQ/exec"
+                target="_blank"
+            >
+                📋 Trips details
+            </a>
+
+
+            <!-- MANAGEMENT -->
+
+            <div class="nav-category">
+                MANAGEMENT
+            </div>
+
+
+            <a
+                href="https://script.google.com/a/macros/akd.org.in/s/AKfycbxsbWMufU7oXPeQ_fL1BPJNBhwZxnuVcZmIcaZriZJtSaq1gFj2Beq-Wbc82sOd4wzWQw/exec"
+                target="_blank"
+            >
+                📝 Leave
+            </a>
+
+
+            <a
+                href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbwFZqhJ7OL2LHXQZByKG0eSVzIKfEJqU0rdy6YjiQiNr6igXZzVmGAqzt-wO4oOm17pgQ/exec"
+                target="_blank"
+            >
+                👥 HR
+            </a>
+
+
+            <a
+                href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbxAeN5Y5NL-1iK7cjQU2VRhU9TAwiWqv0ysQI1zuyg2TjqiQspRR-fuGW_NirsKbRJY/exec"
+                target="_blank"
+            >
+                📦 Indant
+            </a>
+
+
+            <a
+                href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbyBXFeJ7EfMu0FlvDfV9vrTyXuIqo26X7AlYDu6Ssec_H3ML4VZMpdMXBukhnIw3m3zUQ/exec"
+                target="_blank"
+            >
+                🧾 Challan Details
+            </a>
+
+
+            <a
+                href="https://docs.google.com/spreadsheets/d/1kTIOq8b8-9P9_uu6ZuqaTUg4Z6H2J6MYFHZObENaVSs/edit?gid=1336667463#gid=1336667463"
+                target="_blank"
+            >
+                💰 Payment
+            </a>
+
+
+            <!-- VEHICLE & SAFETY -->
+
+            <div class="nav-category">
+                VEHICLE & SAFETY
+            </div>
+
+
+            <a
+                href="https://script.google.com/macros/s/AKfycbxzFs--r7WKBbiMPNeLqDbQL8Op7KInxp9Qr2dPzlyyBrwtVsi71Z7pTpifHvyurDsS/exec"
+                target="_blank"
+            >
+                🔧 Breakdown details
+            </a>
+
+
+            <a
+                href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbzyhPwsLass7J-F_uxRR5K7ss7_VgHi5KQCHh1IHhgf40k1CrrwXclA-uwZAS2mq8Blvw/exec"
+                target="_blank"
+            >
+                ⚠️ Accident details
+            </a>
+
+
+            <a
+                href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbwiPuUhfbxdwaLd07P_6dzZ2-hBmwNdxrKABnQ5JB6SQKhCKDtpmugODiqmclfFLZ9y/exec"
+                target="_blank"
+            >
+                🛞 TYRE Management system
+            </a>
+
+
+            <!-- ANGUL -->
+
+            <div class="nav-category">
+                ANGUL
+            </div>
+
+
+            <a
+                href="https://docs.google.com/spreadsheets/d/1TINzWK_3ZMPAvQnprNG05kVusmNBuG7-2UwJJtvsV5s/edit?usp=sharing"
+                target="_blank"
+            >
+                📊 Angul DDR
+            </a>
+
+
+            <!-- BOTTOM MENU -->
+
+            <div class="bottom-menu">
+
+                <a
+                    href="#"
+                    id="settingsBtn"
+                >
+                    ⚙️ Settings
+                </a>
+
+
+                <a
+                    href="#"
+                    id="logoutBtn"
+                >
+                    🚪 Logout
+                </a>
+
+            </div>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Welcome to KRC GROUP
+                </p>
+
+            </div>
+
+
+            <!-- USER PROFILE -->
+
+            <div class="admin-profile">
+
+                <div class="profile-icon">
+                    👤
                 </div>
 
-                <div class="input-group">
-                    <label for="password">Password</label>
 
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Enter your password"
-                        autocomplete="current-password"
-                        required
-                    >
+                <div class="profile-details">
+
+                    <strong id="currentUser">
+                        Admin
+                    </strong>
+
+                    <span>
+                        Access Level:
+                        <b id="profileAccessLevel">
+                            Admin
+                        </b>
+                    </span>
+
                 </div>
 
-                <div class="login-options">
-                    <label class="remember">
-                        <input type="checkbox" id="rememberMe">
-                        <span>Remember me</span>
-                    </label>
-                </div>
+            </div>
 
-                <button type="submit" class="login-button">
-                    <span>Sign In</span>
-                </button>
+        </header>
 
-                <div id="message"></div>
 
-            </form>
 
-            <div class="login-footer">
-                <p>© 2026 KRC GROUP. All rights reserved.</p>
+        <!-- =================================================
+             WELCOME CARD
+        ================================================== -->
+
+        <section class="welcome-card">
+
+            <div>
+
+                <h2>
+                    Welcome to KRC GROUP
+                </h2>
+
+                <p>
+                    Manage and access all your operational systems from one place.
+                </p>
+
             </div>
 
         </section>
 
+
+
+        <!-- =================================================
+             STATS
+        ================================================== -->
+
+        <section class="stats-grid">
+
+
+            <!-- MODULES -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📁
+                </div>
+
+                <div>
+
+                    <span>
+                        Modules
+                    </span>
+
+                    <strong>
+                        16
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK ACCESS -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🔗
+                </div>
+
+                <div>
+
+                    <span>
+                        Quick Access
+                    </span>
+
+                    <strong>
+                        Active
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACCESS LEVEL -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🔐
+                </div>
+
+                <div>
+
+                    <span>
+                        Access Level
+                    </span>
+
+                    <strong id="accessLevel">
+                        Admin
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MODULES
+        ================================================== -->
+
+        <section class="modules-section">
+
+
+            <!-- OPERATIONS -->
+
+            <div class="section-title">
+
+                <h2>
+                    Operations
+                </h2>
+
+                <p>
+                    Access operational documents and trip management systems.
+                </p>
+
+            </div>
+
+
+            <div class="modules-grid">
+
+
+                <!-- DOC PDF -->
+
+                <a
+                    class="module-card"
+                    href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbwG75q8IFw4vXMHhvWWVuPWpjAKrzj791EG1P_-tyg6Pn5FBgZLYqaOThO5AAAI_mly/exec"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        📄
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            DOC PDF
+                        </h3>
+
+                        <p>
+                            Document PDF management
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- BULK DOC -->
+
+                <a
+                    class="module-card"
+                    href="https://script.google.com/macros/s/AKfycbwXWs6Qhi3fNHep_XbOgRVtiIvejVz4HY7Juditm9ckbiQu8CtXvo55q5Sz5URKVl2g/exec"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        📄
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Bulk Doc
+                        </h3>
+
+                        <p>
+                            Bulk document management
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- PACK TRUCK DOC -->
+
+                <a
+                    class="module-card"
+                    href="https://script.google.com/macros/s/AKfycbx9-ZamkZodXFOZ-LT2Iph_IAIN-pDM9Q3JHK2x8vAFKfuxwXFXDFC06fXylSIAOnd4MA/exec"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        🚛
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Pack truck Doc
+                        </h3>
+
+                        <p>
+                            Pack truck document system
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- DRIVER DETAILS -->
+
+                <a
+                    class="module-card"
+                    href="https://script.google.com/macros/s/AKfycbzvLcA2o5W8PePqeikHtXw2wmSJ7fJSjPcfewOrYu2SpKD1fQ2LTH-uhSfgqu-Vnjyh-A/exec"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        👨‍✈️
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Driver details
+                        </h3>
+
+                        <p>
+                            Driver information system
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- BULK TRIPS -->
+
+                <a
+                    class="module-card"
+                    href="https://script.google.com/macros/s/AKfycbzxk6PjoJSo8hggn0tIKGdWuvpP6IVWAF5BG_K51Tm_Isf7Gk5GGYdcLyrC-zgMAk2Ftw/exec"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        🚚
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Bulk trips details
+                        </h3>
+
+                        <p>
+                            Bulk trip details and records
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- PACK TRUCK TRIPS -->
+
+                <a
+                    class="module-card"
+                    href="https://script.google.com/macros/s/AKfycbwNjkFZJTxGO0IfEbp2iLhoGcKs4b8PlHpDhdSWp0oahTfWUPagUx-Yq_7x3u2CNsGMyQ/exec"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        🚛
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Pack truck trips details
+                        </h3>
+
+                        <p>
+                            Pack truck trip management
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- TRIPS DETAILS -->
+
+                <a
+                    class="module-card"
+                    href="https://script.google.com/macros/s/AKfycbwNjkFZJTxGO0IfEbp2iLhoGcKs4b8PlHpDhdSWp0oahTfWUPagUx-Yq_7x3u2CNsGMyQ/exec"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        📋
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Trips details
+                        </h3>
+
+                        <p>
+                            Trip management system
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- MANAGEMENT -->
+
+            <div class="section-title">
+
+                <h2>
+                    Management
+                </h2>
+
+                <p>
+                    Manage HR, leave, challan, indent and payment operations.
+                </p>
+
+            </div>
+
+
+            <div class="modules-grid">
+
+
+                <!-- LEAVE -->
+
+                <a
+                    class="module-card"
+                    href="https://script.google.com/a/macros/akd.org.in/s/AKfycbxsbWMufU7oXPeQ_fL1BPJNBhwZxnuVcZmIcaZriZJtSaq1gFj2Beq-Wbc82sOd4wzWQw/exec"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        📝
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Leave
+                        </h3>
+
+                        <p>
+                            Employee leave management
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- HR -->
+
+                <a
+                    class="module-card"
+                    href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbwFZqhJ7OL2LHXQZByKG0eSVzIKfEJqU0rdy6YjiQiNr6igXZzVmGAqzt-wO4oOm17pgQ/exec"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            HR
+                        </h3>
+
+                        <p>
+                            Human resource management
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- INDANT -->
+
+                <a
+                    class="module-card"
+                    href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbxAeN5Y5NL-1iK7cjQU2VRhU9TAwiWqv0ysQI1zuyg2TjqiQspRR-fuGW_NirsKbRJY/exec"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        📦
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Indant
+                        </h3>
+
+                        <p>
+                            Indant management system
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- CHALLAN -->
+
+                <a
+                    class="module-card"
+                    href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbyBXFeJ7EfMu0FlvDfV9vrTyXuIqo26X7AlYDu6Ssec_H3ML4VZMpdMXBukhnIw3m3zUQ/exec"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        🧾
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Challan Details
+                        </h3>
+
+                        <p>
+                            Challan management
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- PAYMENT -->
+
+                <a
+                    class="module-card"
+                    href="https://docs.google.com/spreadsheets/d/1kTIOq8b8-9P9_uu6ZuqaTUg4Z6H2J6MYFHZObENaVSs/edit?gid=1336667463#gid=1336667463"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        💰
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Payment
+                        </h3>
+
+                        <p>
+                            Payment information
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- VEHICLE & SAFETY -->
+
+            <div class="section-title">
+
+                <h2>
+                    Vehicle & Safety
+                </h2>
+
+                <p>
+                    Vehicle maintenance, accident and tyre management.
+                </p>
+
+            </div>
+
+
+            <div class="modules-grid">
+
+
+                <!-- BREAKDOWN -->
+
+                <a
+                    class="module-card"
+                    href="https://script.google.com/macros/s/AKfycbxzFs--r7WKBbiMPNeLqDbQL8Op7KInxp9Qr2dPzlyyBrwtVsi71Z7pTpifHvyurDsS/exec"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        🔧
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Breakdown details
+                        </h3>
+
+                        <p>
+                            Vehicle breakdown management
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- ACCIDENT -->
+
+                <a
+                    class="module-card"
+                    href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbzyhPwsLass7J-F_uxRR5K7ss7_VgHi5KQCHh1IHhgf40k1CrrwXclA-uwZAS2mq8Blvw/exec"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        ⚠️
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Accident details
+                        </h3>
+
+                        <p>
+                            Accident records and details
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- TYRE -->
+
+                <a
+                    class="module-card"
+                    href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbwiPuUhfbxdwaLd07P_6dzZ2-hBmwNdxrKABnQ5JB6SQKhCKDtpmugODiqmclfFLZ9y/exec"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        🛞
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            TYRE Management system
+                        </h3>
+
+                        <p>
+                            Tyre management system
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ANGUL -->
+
+            <div class="section-title">
+
+                <h2>
+                    Angul
+                </h2>
+
+                <p>
+                    Angul operational reporting.
+                </p>
+
+            </div>
+
+
+            <div class="modules-grid">
+
+
+                <!-- ANGUL DDR -->
+
+                <a
+                    class="module-card"
+                    href="https://docs.google.com/spreadsheets/d/1TINzWK_3ZMPAvQnprNG05kVusmNBuG7-2UwJJtvsV5s/edit?usp=sharing"
+                    target="_blank"
+                >
+
+                    <div class="module-icon">
+                        📊
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Angul DDR
+                        </h3>
+
+                        <p>
+                            Angul daily reporting
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 KRC GROUP. All Rights Reserved.
+            </p>
+
+        </footer>
+
+
     </main>
 
-    <script src="src/script.js"></script>
+</div>
+
+
+
+<!-- =====================================================
+     DASHBOARD JAVASCRIPT
+====================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* ================================================
+           SESSION CHECK
+        ================================================= */
+
+        const loggedInUser =
+            sessionStorage.getItem("loggedInUser");
+
+        const userRole =
+            sessionStorage.getItem("userRole");
+
+        const storedPages =
+            sessionStorage.getItem("userPages");
+
+
+        if (!loggedInUser) {
+
+            window.location.replace(
+                "../index.html"
+            );
+
+            return;
+        }
+
+
+        /* ================================================
+           USER INFORMATION
+        ================================================= */
+
+        const currentUser =
+            document.getElementById("currentUser");
+
+        const accessLevel =
+            document.getElementById("accessLevel");
+
+        const profileAccessLevel =
+            document.getElementById(
+                "profileAccessLevel"
+            );
+
+
+        if (currentUser) {
+
+            currentUser.textContent =
+                loggedInUser;
+
+        }
+
+
+        const isAdmin =
+            userRole === "admin";
+
+
+        const accessText =
+            isAdmin
+                ? "Admin"
+                : "Restricted";
+
+
+        if (accessLevel) {
+
+            accessLevel.textContent =
+                accessText;
+
+        }
+
+
+        if (profileAccessLevel) {
+
+            profileAccessLevel.textContent =
+                accessText;
+
+        }
+
+
+        /* ================================================
+           GET USER PERMISSIONS
+        ================================================= */
+
+        let allowedPages = [];
+
+
+        try {
+
+            allowedPages =
+                storedPages
+                    ? JSON.parse(storedPages)
+                    : [];
+
+        } catch (error) {
+
+            allowedPages = [];
+
+        }
+
+
+        /* ================================================
+           ADMIN ACCESS
+        ================================================= */
+
+        if (
+            isAdmin ||
+            allowedPages.includes("all")
+        ) {
+
+            setupLogout();
+
+            return;
+        }
+
+
+        /* ================================================
+           NORMALIZE PERMISSIONS
+        ================================================= */
+
+        allowedPages =
+            allowedPages.map(
+                function (page) {
+
+                    return String(page)
+                        .trim()
+                        .toLowerCase();
+
+                }
+            );
+
+
+        /* ================================================
+           FILTER MODULE CARDS
+        ================================================= */
+
+        const moduleCards =
+            document.querySelectorAll(
+                ".module-card"
+            );
+
+
+        moduleCards.forEach(
+            function (card) {
+
+                const titleElement =
+                    card.querySelector("h3");
+
+
+                if (!titleElement) {
+
+                    return;
+
+                }
+
+
+                const title =
+                    titleElement.textContent
+                        .trim()
+                        .toLowerCase();
+
+
+                if (
+                    !allowedPages.includes(title)
+                ) {
+
+                    card.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        /* ================================================
+           FILTER SIDEBAR LINKS
+        ================================================= */
+
+        const sidebarLinks =
+            document.querySelectorAll(
+                ".sidebar-nav > a"
+            );
+
+
+        sidebarLinks.forEach(
+            function (link) {
+
+                const linkText =
+                    link.textContent
+                        .replace(
+                            /[\u{1F300}-\u{1FAFF}]/gu,
+                            ""
+                        )
+                        .trim()
+                        .toLowerCase();
+
+
+                /*
+                 * Always keep Dashboard,
+                 * Settings and Logout.
+                 */
+
+                if (
+                    link.id === "settingsBtn" ||
+                    link.id === "logoutBtn" ||
+                    linkText === "dashboard"
+                ) {
+
+                    return;
+
+                }
+
+
+                if (
+                    !allowedPages.includes(linkText)
+                ) {
+
+                    link.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        /* ================================================
+           HIDE EMPTY SIDEBAR CATEGORIES
+        ================================================= */
+
+        const categories =
+            document.querySelectorAll(
+                ".nav-category"
+            );
+
+
+        categories.forEach(
+            function (category) {
+
+                let next =
+                    category.nextElementSibling;
+
+                let hasVisibleLink =
+                    false;
+
+
+                while (
+                    next &&
+                    !next.classList.contains(
+                        "nav-category"
+                    ) &&
+                    !next.classList.contains(
+                        "bottom-menu"
+                    )
+                ) {
+
+                    if (
+                        next.tagName === "A" &&
+                        next.style.display !== "none"
+                    ) {
+
+                        hasVisibleLink =
+                            true;
+
+                        break;
+
+                    }
+
+
+                    next =
+                        next.nextElementSibling;
+
+                }
+
+
+                if (!hasVisibleLink) {
+
+                    category.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        /* ================================================
+           HIDE EMPTY MODULE SECTIONS
+        ================================================= */
+
+        const sectionTitles =
+            document.querySelectorAll(
+                ".section-title"
+            );
+
+
+        sectionTitles.forEach(
+            function (sectionTitle) {
+
+                const modulesGrid =
+                    sectionTitle.nextElementSibling;
+
+
+                if (
+                    !modulesGrid ||
+                    !modulesGrid.classList.contains(
+                        "modules-grid"
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                const visibleCards =
+                    Array.from(
+                        modulesGrid.querySelectorAll(
+                            ".module-card"
+                        )
+                    ).filter(
+                        function (card) {
+
+                            return (
+                                card.style.display !==
+                                "none"
+                            );
+
+                        }
+                    );
+
+
+                if (
+                    visibleCards.length === 0
+                ) {
+
+                    sectionTitle.style.display =
+                        "none";
+
+                    modulesGrid.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        /* ================================================
+           LOGOUT
+        ================================================= */
+
+        setupLogout();
+
+
+        function setupLogout() {
+
+            const logoutBtn =
+                document.getElementById(
+                    "logoutBtn"
+                );
+
+
+            if (!logoutBtn) {
+
+                return;
+
+            }
+
+
+            logoutBtn.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    sessionStorage.removeItem(
+                        "loggedInUser"
+                    );
+
+                    sessionStorage.removeItem(
+                        "userRole"
+                    );
+
+                    sessionStorage.removeItem(
+                        "userPages"
+                    );
+
+
+                    window.location.replace(
+                        "../index.html"
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* ================================================
+           SETTINGS
+        ================================================= */
+
+        const settingsBtn =
+            document.getElementById(
+                "settingsBtn"
+            );
+
+
+        if (settingsBtn) {
+
+            settingsBtn.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+                    /*
+                     * Settings functionality can
+                     * be added later.
+                     */
+
+                }
+            );
+
+        }
+
+    }
+
+);
+
+</script>
 
 </body>
+
 </html>
