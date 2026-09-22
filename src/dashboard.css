@@ -614,3 +614,26 @@ a {
     }
 
 }
+/* =========================================
+   SIDEBAR SCROLL FIX
+========================================= */
+
+.sidebar {
+    height: 100vh;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sidebar-nav {
+    flex: 0 0 auto;
+    overflow: visible;
+    padding-bottom: 10px;
+}
+
+.bottom-menu {
+    margin-top: 0;
+    flex: 0 0 auto;
+    padding: 15px 14px 25px;
+    border-top: 1px solid #273244;
+}
