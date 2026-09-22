@@ -1,22 +1,24 @@
+/* =========================================
+   KRC GROUP MASTER PORTAL
+   PROFESSIONAL LOGIN
+========================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 body {
-    min-height: 100vh;
-    background:
-        radial-gradient(circle at top left, #26364f 0%, transparent 35%),
-        radial-gradient(circle at bottom right, #172033 0%, transparent 40%),
-        #0b1220;
-
-    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef1f5;
+    color: #111827;
 }
+
+
+/* =========================================
+   LOGIN PAGE
+========================================= */
 
 .login-page {
     min-height: 100vh;
@@ -25,203 +27,283 @@ body {
     align-items: center;
     justify-content: center;
 
-    padding: 30px;
+    padding: 25px;
+
+    background:
+        radial-gradient(circle at top left, rgba(17, 24, 39, 0.08), transparent 35%),
+        #eef1f5;
 }
+
+
+/* =========================================
+   LOGIN CARD
+========================================= */
 
 .login-card {
     width: 100%;
-    max-width: 440px;
+    max-width: 430px;
 
-    padding: 42px;
+    background: #ffffff;
 
-    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid #e5e7eb;
 
-    color: #111827;
+    border-radius: 20px;
 
-    border: 1px solid rgba(255, 255, 255, 0.2);
-
-    border-radius: 24px;
+    padding: 35px;
 
     box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.45);
-}
+        0 20px 50px rgba(17, 24, 39, 0.10);
 
-.brand {
     text-align: center;
-    margin-bottom: 35px;
 }
 
-.brand-logo {
-    width: 72px;
-    height: 72px;
 
-    margin: 0 auto 15px;
+/* =========================================
+   LOGO
+========================================= */
+
+.login-logo {
+    width: 210px;
+    height: 82px;
+
+    margin: 0 auto 20px;
+
+    padding: 7px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 18px;
+    overflow: hidden;
+}
 
-    background: #111827;
-    color: #ffffff;
+.login-logo img {
+    width: 100%;
+    height: 100%;
 
-    font-size: 21px;
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.login-header h1 {
+    font-size: 25px;
     font-weight: 800;
 
-    letter-spacing: 1px;
-}
+    color: #111827;
 
-.brand h1 {
-    font-size: 25px;
-    letter-spacing: 1.5px;
-}
-
-.brand p {
-    margin-top: 5px;
-
-    font-size: 11px;
-    font-weight: 700;
-
-    letter-spacing: 3px;
-    color: #64748b;
-}
-
-.login-header {
-    margin-bottom: 25px;
-}
-
-.login-header h2 {
-    font-size: 26px;
-    margin-bottom: 7px;
+    letter-spacing: 0.5px;
 }
 
 .login-header p {
-    color: #64748b;
-    font-size: 14px;
+    margin-top: 6px;
+
+    font-size: 13px;
+
+    color: #6b7280;
 }
 
-.input-group {
+
+/* =========================================
+   FORM
+========================================= */
+
+#loginForm {
+    margin-top: 30px;
+
+    text-align: left;
+}
+
+.form-group {
     margin-bottom: 20px;
 }
 
-.input-group label {
+.form-group label {
     display: block;
 
     margin-bottom: 8px;
 
-    font-size: 14px;
+    font-size: 13px;
+
     font-weight: 700;
+
+    color: #374151;
 }
 
-.input-group input {
+.form-group input {
     width: 100%;
 
-    padding: 14px 15px;
+    height: 48px;
+
+    padding: 0 14px;
 
     border: 1px solid #d1d5db;
+
     border-radius: 10px;
+
+    background: #f9fafb;
+
+    color: #111827;
+
+    font-size: 14px;
 
     outline: none;
 
-    font-size: 15px;
-
-    transition: 0.2s;
+    transition: all 0.2s ease;
 }
 
-.input-group input:focus {
+.form-group input:focus {
+    background: #ffffff;
+
     border-color: #111827;
 
-    box-shadow:
-        0 0 0 3px rgba(17, 24, 39, 0.08);
+    box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
 }
+
+.form-group input::placeholder {
+    color: #9ca3af;
+}
+
+
+/* =========================================
+   REMEMBER ME
+========================================= */
 
 .login-options {
-    display: flex;
-    align-items: center;
-
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-.remember {
+.remember-me {
     display: flex;
+
     align-items: center;
+
     gap: 8px;
 
-    font-size: 13px;
-    color: #475569;
+    color: #6b7280;
+
+    font-size: 12px;
 
     cursor: pointer;
 }
+
+.remember-me input {
+    accent-color: #111827;
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
 
 .login-button {
     width: 100%;
 
-    padding: 14px;
+    height: 48px;
 
     border: none;
+
     border-radius: 10px;
 
     background: #111827;
+
     color: #ffffff;
 
-    font-size: 15px;
+    font-size: 14px;
+
     font-weight: 700;
 
     cursor: pointer;
 
-    transition: 0.2s;
+    transition: all 0.2s ease;
 }
 
 .login-button:hover {
-    background: #263244;
+    background: #374151;
 
     transform: translateY(-1px);
+
+    box-shadow: 0 8px 18px rgba(17, 24, 39, 0.16);
 }
 
 .login-button:active {
     transform: translateY(0);
 }
 
-#message {
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.message {
     min-height: 20px;
 
-    margin-top: 15px;
+    margin-top: 14px;
 
     text-align: center;
 
-    font-size: 13px;
+    font-size: 12px;
+
     font-weight: 600;
 }
 
+
+/* =========================================
+   FOOTER
+========================================= */
+
 .login-footer {
-    margin-top: 30px;
+    display: flex;
 
-    padding-top: 20px;
+    justify-content: center;
 
-    border-top: 1px solid #e5e7eb;
+    align-items: center;
 
-    text-align: center;
+    gap: 7px;
+
+    margin-top: 28px;
+
+    color: #9ca3af;
+
+    font-size: 10px;
+
+    letter-spacing: 0.3px;
 }
 
-.login-footer p {
-    color: #94a3b8;
-    font-size: 11px;
-}
+
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width: 500px) {
 
     .login-page {
-        padding: 18px;
+        padding: 15px;
     }
 
     .login-card {
-        padding: 30px 22px;
+        padding: 28px 22px;
 
-        border-radius: 18px;
+        border-radius: 16px;
     }
 
-    .login-header h2 {
-        font-size: 23px;
+    .login-logo {
+        width: 190px;
+        height: 75px;
+    }
+
+    .login-header h1 {
+        font-size: 22px;
     }
 }
