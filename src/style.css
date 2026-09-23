@@ -30,7 +30,11 @@ body {
     padding: 25px;
 
     background:
-        radial-gradient(circle at top left, rgba(17, 24, 39, 0.08), transparent 35%),
+        radial-gradient(
+            circle at top left,
+            rgba(17, 24, 39, 0.08),
+            transparent 35%
+        ),
         #eef1f5;
 }
 
@@ -97,6 +101,10 @@ body {
    HEADER
 ========================================= */
 
+.login-header {
+    text-align: center;
+}
+
 .login-header h1 {
     font-size: 25px;
     font-weight: 800;
@@ -125,11 +133,16 @@ body {
     text-align: left;
 }
 
-.form-group {
+
+/* =========================================
+   INPUT GROUP
+========================================= */
+
+.input-group {
     margin-bottom: 20px;
 }
 
-.form-group label {
+.input-group label {
     display: block;
 
     margin-bottom: 8px;
@@ -141,7 +154,7 @@ body {
     color: #374151;
 }
 
-.form-group input {
+.input-group input {
     width: 100%;
 
     height: 48px;
@@ -163,15 +176,16 @@ body {
     transition: all 0.2s ease;
 }
 
-.form-group input:focus {
+.input-group input:focus {
     background: #ffffff;
 
     border-color: #111827;
 
-    box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
+    box-shadow:
+        0 0 0 3px rgba(17, 24, 39, 0.08);
 }
 
-.form-group input::placeholder {
+.input-group input::placeholder {
     color: #9ca3af;
 }
 
@@ -184,7 +198,7 @@ body {
     margin-bottom: 20px;
 }
 
-.remember-me {
+.remember-option {
     display: flex;
 
     align-items: center;
@@ -198,8 +212,13 @@ body {
     cursor: pointer;
 }
 
-.remember-me input {
+.remember-option input {
+    width: 15px;
+    height: 15px;
+
     accent-color: #111827;
+
+    cursor: pointer;
 }
 
 
@@ -234,7 +253,8 @@ body {
 
     transform: translateY(-1px);
 
-    box-shadow: 0 8px 18px rgba(17, 24, 39, 0.16);
+    box-shadow:
+        0 8px 18px rgba(17, 24, 39, 0.16);
 }
 
 .login-button:active {
@@ -243,10 +263,10 @@ body {
 
 
 /* =========================================
-   MESSAGE
+   LOGIN MESSAGE
 ========================================= */
 
-.message {
+.login-message {
     min-height: 20px;
 
     margin-top: 14px;
@@ -279,6 +299,10 @@ body {
     font-size: 10px;
 
     letter-spacing: 0.3px;
+}
+
+.login-footer p {
+    margin: 0;
 }
 
 
