@@ -2,6 +2,7 @@ const loginForm = document.getElementById("loginForm");
 const message = document.getElementById("message");
 
 const users = {
+
     admin: {
         password: "Welcome",
         role: "admin",
@@ -16,7 +17,15 @@ const users = {
             "Pack truck Doc",
             "Driver details",
             "Leave",
-            "Angul DDR"
+
+            "Bulk trips details",
+            "Bulk trips payment",
+            "Pack truck DDR",
+            "Bulk Doc",
+            "Indant management system",
+            "TYRE Management system",
+            "Vehicle maintenance system",
+            "Accident details"
         ]
     },
 
@@ -67,7 +76,15 @@ const users = {
             "DOC PDF",
             "Leave",
             "Bulk Doc",
-            "Pack truck Doc"
+            "Pack truck Doc",
+
+            "Pack truck Diesel details",
+            "Pack truck trips details",
+            "Pack truck trips payment & bulk trips, diesel details",
+            "Accident details",
+            "TYRE Management system",
+            "Vehicle maintenance system",
+            "Angul Trips & Diesel details"
         ]
     },
 
@@ -115,7 +132,9 @@ const users = {
             "DOC PDF",
             "Challan Details",
             "Leave",
-            "Pack truck Doc"
+            "Pack truck Doc",
+
+            "Pack truck trips payment"
         ]
     },
 
@@ -129,57 +148,137 @@ const users = {
             "Leave",
             "Indant"
         ]
+    },
+
+    Breakdown: {
+        password: "56789",
+        role: "user",
+        pages: [
+            "Vehicle maintenance system",
+            "TYRE Management system",
+            "Pack truck Doc",
+            "Bulk Doc",
+            "Accident details",
+            "DOC PDF",
+            "Indant management system",
+            "Leave",
+            "Diesel Issue"
+        ]
+    },
+
+    Indant: {
+        password: "34567",
+        role: "user",
+        pages: [
+            "Indant management system",
+            "TYRE Management system",
+            "Pack truck Doc",
+            "Bulk Doc",
+            "Accident details",
+            "DOC PDF",
+            "Leave"
+        ]
     }
+
 };
 
 
-loginForm.addEventListener("submit", function (event) {
+if (loginForm) {
 
-    event.preventDefault();
+    loginForm.addEventListener("submit", function (event) {
 
-    const username =
-        document.getElementById("username").value.trim();
+        event.preventDefault();
 
-    const password =
-        document.getElementById("password").value;
+        const username =
+            document.getElementById("username").value.trim();
 
-    const user = users[username];
+        const password =
+            document.getElementById("password").value;
 
-    if (user && user.password === password) {
+        const rememberMe =
+            document.getElementById("rememberMe")?.checked;
 
-        // Save logged-in user information
-        sessionStorage.setItem("loggedInUser", username);
-        sessionStorage.setItem("userRole", user.role);
+        const user = users[username];
 
-        if (user.role === "admin") {
+        if (user && user.password === password) {
 
             sessionStorage.setItem(
-                "userPages",
-                JSON.stringify(["all"])
+                "loggedInUser",
+                username
             );
+
+            sessionStorage.setItem(
+                "userRole",
+                user.role
+            );
+
+            if (user.role === "admin") {
+
+                sessionStorage.setItem(
+                    "userPages",
+                    JSON.stringify(["all"])
+                );
+
+            } else {
+
+                sessionStorage.setItem(
+                    "userPages",
+                    JSON.stringify(user.pages)
+                );
+            }
+
+            if (rememberMe) {
+
+                localStorage.setItem(
+                    "rememberedUsername",
+                    username
+                );
+
+            } else {
+
+                localStorage.removeItem(
+                    "rememberedUsername"
+                );
+            }
+
+            message.textContent = "Login successful.";
+            message.style.color = "#15803d";
+
+            setTimeout(function () {
+
+                window.location.href =
+                    "src/dashboard.html";
+
+            }, 500);
 
         } else {
 
-            sessionStorage.setItem(
-                "userPages",
-                JSON.stringify(user.pages)
-            );
+            message.textContent =
+                "Invalid username or password.";
+
+            message.style.color = "#dc2626";
         }
 
-        message.textContent = "Login successful.";
-        message.style.color = "#15803d";
+    });
 
-        setTimeout(() => {
 
-            window.location.href = "src/dashboard.html";
+    // Remember username
+    const rememberedUsername =
+        localStorage.getItem("rememberedUsername");
 
-        }, 500);
+    if (rememberedUsername) {
 
-    } else {
+        const usernameInput =
+            document.getElementById("username");
 
-        message.textContent =
-            "Invalid username or password.";
+        if (usernameInput) {
 
-        message.style.color = "#dc2626";
+            usernameInput.value =
+                rememberedUsername;
+
+            document.getElementById(
+                "rememberMe"
+            ).checked = true;
+        }
     }
-});
+}
