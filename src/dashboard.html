@@ -17,6 +17,146 @@
         href="dashboard.css"
     >
 
+
+<style>
+
+/* =====================================================
+   PROFESSIONAL INDIA TIME CLOCK + DATE
+===================================================== */
+
+.welcome-time-panel {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-left: auto;
+    padding: 8px 4px 8px 20px;
+}
+
+.analog-clock {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    flex: 0 0 92px;
+    border: 3px solid rgba(255,255,255,0.92);
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.18), inset 0 0 0 1px rgba(255,255,255,0.15);
+}
+
+.clock-mark {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 2px;
+    height: 7px;
+    background: rgba(255,255,255,0.9);
+    transform-origin: 50% 40px;
+    border-radius: 2px;
+}
+
+.clock-mark.major {
+    width: 3px;
+    height: 10px;
+    background: #ffffff;
+}
+
+.clock-hand {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: 50% 100%;
+    border-radius: 5px;
+}
+
+.clock-hour {
+    width: 5px;
+    height: 25px;
+    margin-left: -2.5px;
+    background: #ffffff;
+}
+
+.clock-minute {
+    width: 3px;
+    height: 33px;
+    margin-left: -1.5px;
+    background: #ffffff;
+}
+
+.clock-second {
+    width: 2px;
+    height: 36px;
+    margin-left: -1px;
+    background: #f59e0b;
+}
+
+.clock-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    border-radius: 50%;
+    background: #f59e0b;
+    border: 2px solid #ffffff;
+    z-index: 5;
+}
+
+.clock-number {
+    position: absolute;
+    color: rgba(255,255,255,0.95);
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1;
+    transform: translate(-50%, -50%);
+}
+
+.dashboard-date {
+    min-width: 128px;
+    color: #ffffff;
+}
+
+.dashboard-date-day {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    opacity: 0.82;
+    margin-bottom: 4px;
+}
+
+.dashboard-date-value {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+
+@media (max-width: 700px) {
+    .welcome-time-panel {
+        gap: 10px;
+        padding-left: 8px;
+    }
+
+    .analog-clock {
+        width: 72px;
+        height: 72px;
+        flex-basis: 72px;
+    }
+
+    .clock-mark {
+        transform-origin: 50% 30px;
+    }
+
+    .dashboard-date {
+        min-width: 100px;
+    }
+
+    .dashboard-date-value {
+        font-size: 13px;
+    }
+}
+
+</style>
+
 </head>
 
 <body>
@@ -181,6 +321,15 @@
             </a>
 
 
+
+
+            <a href="https://script.google.com/macros/s/AKfycbyoSyiZv3eHg1HN_jrZgctFb_Esa8xjXJWOHoW9aeqWWVV1Mfh3nouoSFC53a8nwhDLuA/exec?p=diesel" target="_blank"><span class="nav-icon">⛽</span><span class="nav-text">Diesel Issue</span></a>
+
+            <a href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbxG6visDJ4bpNYR9b6hiLRYuxCm6iC3INls_4y1JTKVnU74zgOSb5Mu-ZXoTrvrxbgHdg/exec" target="_blank"><span class="nav-icon">📋</span><span class="nav-text">Pack truck DDR</span></a>
+
+            <a href="https://script.google.com/a/nrlpg.com/macros/s/AKfycbwNjkFZJTxGO0IfEbp2iLhoGcKs4b8PlHpDhdSWp0oahTfWUPagUx-Yq_7x3u2CNsGMyQ/exec?p=diesel-dashboard" target="_blank"><span class="nav-icon">⛽</span><span class="nav-text">Pack truck Diesel details</span></a>
+
+
             <!-- MANAGEMENT -->
 
             <div class="nav-category">
@@ -258,6 +407,15 @@
             </a>
 
 
+
+
+            <a href="https://docs.google.com/spreadsheets/d/1kTIOq8b8-9P9_uu6ZuqaTUg4Z6H2J6MYFHZObENaVSs/edit?usp=sharing" target="_blank"><span class="nav-icon">💰</span><span class="nav-text">Bulk trips payment</span></a>
+
+            <a href="https://docs.google.com/spreadsheets/d/1kTIOq8b8-9P9_uu6ZuqaTUg4Z6H2J6MYFHZObENaVSs/edit?gid=1336667463#gid=1336667463" target="_blank"><span class="nav-icon">💳</span><span class="nav-text">Pack truck trips payment</span></a>
+
+            <a href="https://docs.google.com/spreadsheets/d/1kTIOq8b8-9P9_uu6ZuqaTUg4Z6H2J6MYFHZObENaVSs/edit?gid=1336667463#gid=1336667463" target="_blank"><span class="nav-icon">📊</span><span class="nav-text">Pack truck trips payment &amp; bulk trips, diesel details</span></a>
+
+
             <!-- VEHICLE & SAFETY -->
 
             <div class="nav-category">
@@ -307,52 +465,6 @@
             </a>
 
 
-
-            <a href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbxAeN5Y5NL-1iK7cjQU2VRhU9TAwiWqv0ysQI1zuyg2TjqiQspRR-fuGW_NirsKbRJY/exec" target="_blank">
-                <span class="nav-icon">📦</span>
-                <span class="nav-text">Indant management system</span>
-            </a>
-
-            <a href="https://script.google.com/a/macros/akd.org.in/s/AKfycbxzFs--r7WKBbiMPNeLqDbQL8Op7KInxp9Qr2dPzlyyBrwtVsi71Z7pTpifHvyurDsS/exec" target="_blank">
-                <span class="nav-icon">🔧</span>
-                <span class="nav-text">Vehicle maintenance system</span>
-            </a>
-
-            <a href="https://script.google.com/macros/s/AKfycbyoSyiZv3eHg1HN_jrZgctFb_Esa8xjXJWOHoW9aeqWWVV1Mfh3nouoSFC53a8nwhDLuA/exec?p=diesel" target="_blank">
-                <span class="nav-icon">⛽</span>
-                <span class="nav-text">Diesel Issue</span>
-            </a>
-
-            <a href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbxG6visDJ4bpNYR9b6hiLRYuxCm6iC3INls_4y1JTKVnU74zgOSb5Mu-ZXoTrvrxbgHdg/exec" target="_blank">
-                <span class="nav-icon">📊</span>
-                <span class="nav-text">Pack truck DDR</span>
-            </a>
-
-            <a href="https://docs.google.com/spreadsheets/d/1kTIOq8b8-9P9_uu6ZuqaTUg4Z6H2J6MYFHZObENaVSs/edit?usp=sharing" target="_blank">
-                <span class="nav-icon">💰</span>
-                <span class="nav-text">Bulk trips payment</span>
-            </a>
-
-            <a href="https://script.google.com/a/nrlpg.com/macros/s/AKfycbwNjkFZJTxGO0IfEbp2iLhoGcKs4b8PlHpDhdSWp0oahTfWUPagUx-Yq_7x3u2CNsGMyQ/exec?p=diesel-dashboard" target="_blank">
-                <span class="nav-icon">⛽</span>
-                <span class="nav-text">Pack truck Diesel details</span>
-            </a>
-
-            <a href="https://docs.google.com/spreadsheets/d/1kTIOq8b8-9P9_uu6ZuqaTUg4Z6H2J6MYFHZObENaVSs/edit?gid=1336667463#gid=1336667463" target="_blank">
-                <span class="nav-icon">💳</span>
-                <span class="nav-text">Pack truck trips payment</span>
-            </a>
-
-            <a href="https://docs.google.com/spreadsheets/d/1kTIOq8b8-9P9_uu6ZuqaTUg4Z6H2J6MYFHZObENaVSs/edit?gid=1336667463#gid=1336667463" target="_blank">
-                <span class="nav-icon">📋</span>
-                <span class="nav-text">Pack truck trips payment &amp; bulk trips, diesel details</span>
-            </a>
-
-            <a href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbxG6visDJ4bpNYR9b6hiLRYuxCm6iC3INls_4y1JTKVnU74zgOSb5Mu-ZXoTrvrxbgHdg/exec" target="_blank">
-                <span class="nav-icon">🚚</span>
-                <span class="nav-text">Angul Trips &amp; Diesel details</span>
-            </a>
-
             <!-- ANGUL -->
 
             <div class="nav-category">
@@ -371,6 +483,14 @@
                     Angul DDR
                 </span>
 
+            </a>
+
+
+
+
+            <a href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbxG6visDJ4bpNYR9b6hiLRYuxCm6iC3INls_4y1JTKVnU74zgOSb5Mu-ZXoTrvrxbgHdg/exec" target="_blank">
+                <span class="nav-icon">🚚</span>
+                <span class="nav-text">Angul Trips &amp; Diesel details</span>
             </a>
 
 
@@ -494,8 +614,33 @@
                 </div>
 
 
-                <div class="welcome-icon">
-                    🏢
+                <div class="welcome-time-panel">
+
+                    <div class="analog-clock" id="indiaAnalogClock" aria-label="Live clock">
+                        <span class="clock-number" style="left:50%;top:13%">12</span>
+                        <span class="clock-number" style="left:68%;top:20%">1</span>
+                        <span class="clock-number" style="left:82%;top:35%">2</span>
+                        <span class="clock-number" style="left:87%;top:51%">3</span>
+                        <span class="clock-number" style="left:82%;top:68%">4</span>
+                        <span class="clock-number" style="left:68%;top:82%">5</span>
+                        <span class="clock-number" style="left:50%;top:88%">6</span>
+                        <span class="clock-number" style="left:32%;top:82%">7</span>
+                        <span class="clock-number" style="left:18%;top:68%">8</span>
+                        <span class="clock-number" style="left:13%;top:51%">9</span>
+                        <span class="clock-number" style="left:18%;top:35%">10</span>
+                        <span class="clock-number" style="left:32%;top:20%">11</span>
+
+                        <span class="clock-hand clock-hour" id="clockHour"></span>
+                        <span class="clock-hand clock-minute" id="clockMinute"></span>
+                        <span class="clock-hand clock-second" id="clockSecond"></span>
+                        <span class="clock-center"></span>
+                    </div>
+
+                    <div class="dashboard-date">
+                        <div class="dashboard-date-day" id="dashboardDateDay">--</div>
+                        <div class="dashboard-date-value" id="dashboardDateValue">--</div>
+                    </div>
+
                 </div>
 
 
@@ -520,7 +665,9 @@
                             Modules
                         </span>
 
-                        <strong>25</strong>
+                        <strong>
+                            23
+                        </strong>
 
                     </div>
 
@@ -794,6 +941,34 @@
 
                 </div>
 
+                <div class="module-card">
+                    <div class="module-icon">⛽</div>
+                    <div class="module-content">
+                        <h3>Diesel Issue</h3>
+                        <p>Access Diesel Issue system.</p>
+                        <a class="module-button" href="https://script.google.com/macros/s/AKfycbyoSyiZv3eHg1HN_jrZgctFb_Esa8xjXJWOHoW9aeqWWVV1Mfh3nouoSFC53a8nwhDLuA/exec?p=diesel" target="_blank">Open <span>↗</span></a>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-icon">📋</div>
+                    <div class="module-content">
+                        <h3>Pack truck DDR</h3>
+                        <p>Access Pack Truck DDR.</p>
+                        <a class="module-button" href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbxG6visDJ4bpNYR9b6hiLRYuxCm6iC3INls_4y1JTKVnU74zgOSb5Mu-ZXoTrvrxbgHdg/exec" target="_blank">Open <span>↗</span></a>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-icon">⛽</div>
+                    <div class="module-content">
+                        <h3>Pack truck Diesel details</h3>
+                        <p>Access Pack Truck Diesel Details.</p>
+                        <a class="module-button" href="https://script.google.com/a/nrlpg.com/macros/s/AKfycbwNjkFZJTxGO0IfEbp2iLhoGcKs4b8PlHpDhdSWp0oahTfWUPagUx-Yq_7x3u2CNsGMyQ/exec?p=diesel-dashboard" target="_blank">Open <span>↗</span></a>
+                    </div>
+                </div>
+
+
 
             </section>
 
@@ -960,6 +1135,34 @@
 
                 </div>
 
+                <div class="module-card">
+                    <div class="module-icon">💰</div>
+                    <div class="module-content">
+                        <h3>Bulk trips payment</h3>
+                        <p>Access Bulk Trips Payment.</p>
+                        <a class="module-button" href="https://docs.google.com/spreadsheets/d/1kTIOq8b8-9P9_uu6ZuqaTUg4Z6H2J6MYFHZObENaVSs/edit?usp=sharing" target="_blank">Open <span>↗</span></a>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-icon">💳</div>
+                    <div class="module-content">
+                        <h3>Pack truck trips payment</h3>
+                        <p>Access Pack Truck Trips Payment.</p>
+                        <a class="module-button" href="https://docs.google.com/spreadsheets/d/1kTIOq8b8-9P9_uu6ZuqaTUg4Z6H2J6MYFHZObENaVSs/edit?gid=1336667463#gid=1336667463" target="_blank">Open <span>↗</span></a>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-icon">📊</div>
+                    <div class="module-content">
+                        <h3>Pack truck trips payment &amp; bulk trips, diesel details</h3>
+                        <p>Access Pack Truck Trips Payment, Bulk Trips and Diesel Details.</p>
+                        <a class="module-button" href="https://docs.google.com/spreadsheets/d/1kTIOq8b8-9P9_uu6ZuqaTUg4Z6H2J6MYFHZObENaVSs/edit?gid=1336667463#gid=1336667463" target="_blank">Open <span>↗</span></a>
+                    </div>
+                </div>
+
+
 
             </section>
 
@@ -1071,88 +1274,6 @@
 
 
 
-
-            <div class="module-card">
-                <div class="module-icon">📦</div>
-                <div class="module-content">
-                    <h3>Indant management system</h3>
-                    <p>Access Indant Management System.</p>
-                    <a class="module-button" href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbxAeN5Y5NL-1iK7cjQU2VRhU9TAwiWqv0ysQI1zuyg2TjqiQspRR-fuGW_NirsKbRJY/exec" target="_blank">Open <span>↗</span></a>
-                </div>
-            </div>
-
-            <div class="module-card">
-                <div class="module-icon">🔧</div>
-                <div class="module-content">
-                    <h3>Vehicle maintenance system</h3>
-                    <p>Access Vehicle Maintenance System.</p>
-                    <a class="module-button" href="https://script.google.com/a/macros/akd.org.in/s/AKfycbxzFs--r7WKBbiMPNeLqDbQL8Op7KInxp9Qr2dPzlyyBrwtVsi71Z7pTpifHvyurDsS/exec" target="_blank">Open <span>↗</span></a>
-                </div>
-            </div>
-
-            <div class="module-card">
-                <div class="module-icon">⛽</div>
-                <div class="module-content">
-                    <h3>Diesel Issue</h3>
-                    <p>Access Diesel Issue system.</p>
-                    <a class="module-button" href="https://script.google.com/macros/s/AKfycbyoSyiZv3eHg1HN_jrZgctFb_Esa8xjXJWOHoW9aeqWWVV1Mfh3nouoSFC53a8nwhDLuA/exec?p=diesel" target="_blank">Open <span>↗</span></a>
-                </div>
-            </div>
-
-            <div class="module-card">
-                <div class="module-icon">📊</div>
-                <div class="module-content">
-                    <h3>Pack truck DDR</h3>
-                    <p>Access Pack Truck DDR.</p>
-                    <a class="module-button" href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbxG6visDJ4bpNYR9b6hiLRYuxCm6iC3INls_4y1JTKVnU74zgOSb5Mu-ZXoTrvrxbgHdg/exec" target="_blank">Open <span>↗</span></a>
-                </div>
-            </div>
-
-            <div class="module-card">
-                <div class="module-icon">💰</div>
-                <div class="module-content">
-                    <h3>Bulk trips payment</h3>
-                    <p>Access Bulk Trips Payment.</p>
-                    <a class="module-button" href="https://docs.google.com/spreadsheets/d/1kTIOq8b8-9P9_uu6ZuqaTUg4Z6H2J6MYFHZObENaVSs/edit?usp=sharing" target="_blank">Open <span>↗</span></a>
-                </div>
-            </div>
-
-            <div class="module-card">
-                <div class="module-icon">⛽</div>
-                <div class="module-content">
-                    <h3>Pack truck Diesel details</h3>
-                    <p>Access Pack Truck Diesel Details.</p>
-                    <a class="module-button" href="https://script.google.com/a/nrlpg.com/macros/s/AKfycbwNjkFZJTxGO0IfEbp2iLhoGcKs4b8PlHpDhdSWp0oahTfWUPagUx-Yq_7x3u2CNsGMyQ/exec?p=diesel-dashboard" target="_blank">Open <span>↗</span></a>
-                </div>
-            </div>
-
-            <div class="module-card">
-                <div class="module-icon">💳</div>
-                <div class="module-content">
-                    <h3>Pack truck trips payment</h3>
-                    <p>Access Pack Truck Trips Payment.</p>
-                    <a class="module-button" href="https://docs.google.com/spreadsheets/d/1kTIOq8b8-9P9_uu6ZuqaTUg4Z6H2J6MYFHZObENaVSs/edit?gid=1336667463#gid=1336667463" target="_blank">Open <span>↗</span></a>
-                </div>
-            </div>
-
-            <div class="module-card">
-                <div class="module-icon">📋</div>
-                <div class="module-content">
-                    <h3>Pack truck trips payment &amp; bulk trips, diesel details</h3>
-                    <p>Access Pack Truck Trips Payment and Bulk Trips/Diesel Details.</p>
-                    <a class="module-button" href="https://docs.google.com/spreadsheets/d/1kTIOq8b8-9P9_uu6ZuqaTUg4Z6H2J6MYFHZObENaVSs/edit?gid=1336667463#gid=1336667463" target="_blank">Open <span>↗</span></a>
-                </div>
-            </div>
-
-            <div class="module-card">
-                <div class="module-icon">🚚</div>
-                <div class="module-content">
-                    <h3>Angul Trips &amp; Diesel details</h3>
-                    <p>Access Angul Trips and Diesel Details.</p>
-                    <a class="module-button" href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbxG6visDJ4bpNYR9b6hiLRYuxCm6iC3INls_4y1JTKVnU74zgOSb5Mu-ZXoTrvrxbgHdg/exec" target="_blank">Open <span>↗</span></a>
-                </div>
-            </div>
-
             <!-- =================================================
                  ANGUL
             ================================================== -->
@@ -1194,6 +1315,16 @@
 
                 </div>
 
+                <div class="module-card">
+                    <div class="module-icon">🚚</div>
+                    <div class="module-content">
+                        <h3>Angul Trips &amp; Diesel details</h3>
+                        <p>Access Angul Trips &amp; Diesel Details.</p>
+                        <a class="module-button" href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbxG6visDJ4bpNYR9b6hiLRYuxCm6iC3INls_4y1JTKVnU74zgOSb5Mu-ZXoTrvrxbgHdg/exec" target="_blank">Open <span>↗</span></a>
+                    </div>
+                </div>
+
+
 
             </section>
 
@@ -1225,6 +1356,77 @@
 <!-- =====================================================
      USER ACCESS + LOGOUT SCRIPT
 ====================================================== -->
+
+<script>
+
+/* =====================================================
+   LIVE INDIA TIME
+   Fixed to Asia/Kolkata — never uses laptop timezone.
+===================================================== */
+
+(function () {
+
+    function updateIndiaClock() {
+
+        const now = new Date();
+
+        const parts = new Intl.DateTimeFormat("en-IN", {
+            timeZone: "Asia/Kolkata",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hourCycle: "h23"
+        }).formatToParts(now);
+
+        const values = {};
+        parts.forEach(function (part) {
+            if (part.type !== "literal") values[part.type] = part.value;
+        });
+
+        const hour = Number(values.hour);
+        const minute = Number(values.minute);
+        const second = Number(values.second);
+
+        const hourAngle = (hour % 12) * 30 + minute * 0.5;
+        const minuteAngle = minute * 6 + second * 0.1;
+        const secondAngle = second * 6;
+
+        const hourHand = document.getElementById("clockHour");
+        const minuteHand = document.getElementById("clockMinute");
+        const secondHand = document.getElementById("clockSecond");
+
+        if (hourHand) hourHand.style.transform = "rotate(" + hourAngle + "deg)";
+        if (minuteHand) minuteHand.style.transform = "rotate(" + minuteAngle + "deg)";
+        if (secondHand) secondHand.style.transform = "rotate(" + secondAngle + "deg)";
+
+        const dateParts = new Intl.DateTimeFormat("en-IN", {
+            timeZone: "Asia/Kolkata",
+            weekday: "long",
+            day: "2-digit",
+            month: "short",
+            year: "numeric"
+        }).formatToParts(now);
+
+        const dateValues = {};
+        dateParts.forEach(function (part) {
+            if (part.type !== "literal") dateValues[part.type] = part.value;
+        });
+
+        const dayEl = document.getElementById("dashboardDateDay");
+        const dateEl = document.getElementById("dashboardDateValue");
+
+        if (dayEl) dayEl.textContent = dateValues.weekday || "";
+        if (dateEl) {
+            dateEl.textContent = (dateValues.day || "") + " " + (dateValues.month || "") + " " + (dateValues.year || "");
+        }
+    }
+
+    updateIndiaClock();
+    setInterval(updateIndiaClock, 1000);
+
+})();
+
+</script>
 
 <script>
 
