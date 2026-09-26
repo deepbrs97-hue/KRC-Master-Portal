@@ -379,6 +379,17 @@
             </a>
 
 
+
+            <a
+                href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbxAeN5Y5NL-1iK7cjQU2VRhU9TAwiWqv0ysQI1zuyg2TjqiQspRR-fuGW_NirsKbRJY/exec"
+                target="_blank"
+                data-page="Indent Management"
+            >
+                <span class="nav-icon">📦</span>
+                <span class="nav-text">
+                    Indent Management
+                </span>
+            </a>
             <a
                 href="https://script.google.com/a/macros/nrlpg.com/s/AKfycbyBXFeJ7EfMu0FlvDfV9vrTyXuIqo26X7AlYDu6Ssec_H3ML4VZMpdMXBukhnIw3m3zUQ/exec"
                 target="_blank"
@@ -465,20 +476,17 @@
             </a>
 
 
+
             <a
                 href="https://script.google.com/a/macros/akd.org.in/s/AKfycbxzFs--r7WKBbiMPNeLqDbQL8Op7KInxp9Qr2dPzlyyBrwtVsi71Z7pTpifHvyurDsS/exec"
                 target="_blank"
+                data-page="Vehicle Maintenance System"
             >
-
                 <span class="nav-icon">🔧</span>
-
                 <span class="nav-text">
                     Vehicle Maintenance System
                 </span>
-
             </a>
-
-
             <!-- ANGUL -->
 
             <div class="nav-category">
@@ -1284,6 +1292,8 @@
                 </div>
 
 
+
+
                 <div class="module-card">
 
                     <div class="module-icon">
@@ -1312,7 +1322,6 @@
                     </div>
 
                 </div>
-
 
             </section>
 
@@ -1644,15 +1653,37 @@ document.addEventListener(
                             .trim();
 
 
+                    const normalizedPageName =
+                        pageName
+                            .toLowerCase()
+                            .trim();
+
+
+                    const aliases = {
+                        "indent management": [
+                            "indent management",
+                            "indant",
+                            "indant management system",
+                            "indent management system"
+                        ],
+                        "vehicle maintenance system": [
+                            "vehicle maintenance system",
+                            "vehicle maintenance"
+                        ]
+                    };
+
+
+                    const allowedNames =
+                        aliases[normalizedPageName] ||
+                        [normalizedPageName];
+
+
                     const hasAccess =
                         allowedPages.some(
                             function (page) {
 
-                                return (
+                                return allowedNames.includes(
                                     page
-                                        .toLowerCase()
-                                        .trim() ===
-                                    pageName
                                         .toLowerCase()
                                         .trim()
                                 );
@@ -1688,9 +1719,11 @@ document.addEventListener(
                             .textContent
                             .trim();
 
+                    const accessPage =
+                        link.dataset.page || text;
 
                     const lowerText =
-                        text.toLowerCase();
+                        accessPage.toLowerCase();
 
 
                     /* Dashboard always visible */
@@ -1706,16 +1739,34 @@ document.addEventListener(
                     }
 
 
+                    const sidebarAliases = {
+                        "indent management": [
+                            "indent management",
+                            "indant",
+                            "indant management system",
+                            "indent management system"
+                        ],
+                        "vehicle maintenance system": [
+                            "vehicle maintenance system",
+                            "vehicle maintenance"
+                        ]
+                    };
+
+
+                    const sidebarAllowedNames =
+                        sidebarAliases[lowerText] ||
+                        [lowerText];
+
+
                     const hasAccess =
                         allowedPages.some(
                             function (page) {
 
-                                return lowerText
-                                    .includes(
-                                        page
-                                            .toLowerCase()
-                                            .trim()
-                                    );
+                                return sidebarAllowedNames.includes(
+                                    page
+                                        .toLowerCase()
+                                        .trim()
+                                );
 
                             }
                         );
