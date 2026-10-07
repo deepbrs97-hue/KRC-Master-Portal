@@ -16,7 +16,7 @@ const users = {
 
     Driver: {
         password: "23456", role: "user",
-        pages: ["DOC PDF", "Bulk Doc", "Pack truck Doc", "Driver details", "Leave"]
+        pages: ["DOC PDF", "Bulk Doc", "Pack truck Doc", "Driver details", "Leave", "Indent Management"]
     },
 
     Challan: {
@@ -57,7 +57,7 @@ const users = {
         pages: [
             "Bulk Doc", "Breakdown details", "TYRE Management system",
             "Driver details", "Accident details", "DOC PDF",
-            "Challan Details", "Leave", "Payment", "Bulk trips details"
+            "Challan Details", "Leave", "Payment", "Bulk trips details", "Indent Management"
         ]
     },
 
@@ -67,7 +67,7 @@ const users = {
             "Trips details", "Breakdown details", "TYRE Management system",
             "Driver details", "Accident details", "DOC PDF",
             "Challan Details", "Leave", "Pack truck Doc",
-            "Pack truck trips payment"
+            "Pack truck trips payment", "Indent Management"
         ]
     },
 
