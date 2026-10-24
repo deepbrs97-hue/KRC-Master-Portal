@@ -4,6 +4,11 @@ const message = document.getElementById("message");
 const users = {
     admin: { password: "Welcome", role: "admin", pages: "all" },
 
+    Loan: {
+        password: "54321", role: "user",
+        pages: ["Loan details"]
+    },
+
     Angul: {
         password: "12345", role: "user",
         pages: [
@@ -23,7 +28,7 @@ const users = {
         password: "34567", role: "user",
         pages: [
             "Challan Details", "DOC PDF", "Bulk Doc", "Pack truck Doc", "Leave",
-            "Bulk trips details", "Pack truck trips details"
+            "Bulk trips details", "Pack truck trips details", "Loan details"
         ]
     },
 
@@ -43,7 +48,7 @@ const users = {
             "Pack truck Diesel details", "Pack truck trips details",
             "Pack truck trips payment & bulk trips, diesel details",
             "Accident details", "TYRE Management system",
-            "Vehicle Maintenance System", "Angul Trips & Diesel details"
+            "Vehicle Maintenance System", "Angul Trips & Diesel details", "Loan details"
         ]
     },
 
