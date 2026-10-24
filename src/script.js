@@ -6,7 +6,10 @@ const users = {
 
     Loan: {
         password: "54321", role: "user",
-        pages: ["Loan details"]
+        pages: [
+            "DOC PDF", "Bulk Doc", "Pack truck Doc", "Loan details",
+            "Leave", "Indent Management", "Accident details"
+        ]
     },
 
     Angul: {
