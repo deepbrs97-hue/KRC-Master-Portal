@@ -1,3 +1,4 @@
+
 const loginForm = document.getElementById("loginForm");
 const message = document.getElementById("message");
 
@@ -48,6 +49,7 @@ const users = {
         pages: [
             "DOC PDF", "Leave", "Bulk Doc", "Pack truck Doc",
             "Indent Management",
+            "Bulk trips details",
             "Pack truck Diesel details", "Pack truck trips details",
             "Pack truck trips payment & bulk trips, diesel details",
             "Accident details", "TYRE Management system",
